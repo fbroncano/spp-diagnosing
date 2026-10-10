@@ -1,0 +1,65 @@
+{
+  "title": "spp-diagnosing: SPP processing pipeline and characterisation analysis for the Spanish EPN stations",
+  "description": "Code accompanying the manuscript 'Diagnosing a GNSS data processing pipeline through instrument metadata over the EPN network in Spain'. It contains the standard point positioning (SPP) pipeline that was audited, which computes daily positions for each station from its own observation and navigation RINEX files without precise products, for GPS, Galileo, BeiDou and their combination with five daily estimators, and the analysis that compares them against the daily PPP series of the Nevada Geodetic Laboratory over 27 Spanish EPN stations and 1001 days (1 October 2023 to 27 June 2026). The analysis reproduces the constellation-estimator characterisation, the grouping of residuals by antenna model, the antenna versus receiver checks (bootstrap intervals and permutation tests) and Figures 3 to 5 of the article. It includes a patch for georinex 1.16.2, whose RINEX 3 navigation reader silently discards every BeiDou ephemeris. Solutions are stored in PostgreSQL/PostGIS; the database schema and deployment are published separately in GeoGNSS-PS (DOI 10.5281/zenodo.20538639). GNSS data are obtained from the IGN ERGNSS server, station metadata from the EPN site logs and the reference series from the Nevada Geodetic Laboratory; none of them is redistributed.",
+  "creators": [
+    {
+      "name": "Broncano, Fernando",
+      "affiliation": "Universidad de Extremadura",
+      "orcid": "0009-0001-8104-6232"
+    },
+    {
+      "name": "Rodríguez, Pablo G.",
+      "affiliation": "Universidad de Extremadura",
+      "orcid": "0000-0001-8168-7892"
+    },
+    {
+      "name": "Botejara-Antúnez, Manuel",
+      "affiliation": "Universidad de Extremadura",
+      "orcid": "0000-0003-2570-1658"
+    },
+    {
+      "name": "Caro, Andrés",
+      "affiliation": "Universidad de Extremadura",
+      "orcid": "0000-0002-6367-2694"
+    },
+    {
+      "name": "Cuartero, Aurora",
+      "affiliation": "Universidad de Extremadura",
+      "orcid": "0000-0002-0219-9696"
+    }
+  ],
+  "license": "mit",
+  "upload_type": "software",
+  "access_right": "open",
+  "language": "eng",
+  "version": "1.0.0",
+  "keywords": [
+    "GNSS",
+    "standard point positioning",
+    "SPP",
+    "EPN",
+    "Galileo",
+    "BeiDou",
+    "antenna calibration",
+    "instrument metadata",
+    "data quality",
+    "silent errors",
+    "scientific software",
+    "georinex",
+    "PostGIS",
+    "Spain"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.20538639",
+      "relation": "requires",
+      "scheme": "doi",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/fbroncano/spp-diagnosing",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
